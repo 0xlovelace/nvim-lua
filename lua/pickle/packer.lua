@@ -68,4 +68,16 @@ return require('packer').startup(function(use)
             "windwp/nvim-autopairs",
             config = function() require("nvim-autopairs").setup {} end
         }
+
+        use {
+            "stevearc/dressing.nvim",
+            event = "BufEnter",
+            config = function()
+                require("dressing").setup {
+                    select = {
+                        backend = { "telescope", "fzf", "builtin" },
+                    },
+                }
+            end,
+        }
     end)
