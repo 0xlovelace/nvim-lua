@@ -21,9 +21,7 @@ set.undofile = true
 set.hlsearch = false
 set.incsearch = true
 
-set.termguicolors = true
-
-set.scrolloff = 10
+set.scrolloff = 20
 set.signcolumn = "yes"
 set.isfname:append("@-@")
 
