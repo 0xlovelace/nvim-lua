@@ -9,15 +9,24 @@ lsp.nvim_workspace()
 lsp.ensure_installed({
     'tsserver',
     'eslint',
-    'sumneko_lua',
+    'lua_ls',
     'rust_analyzer',
     'sqlls',
     'cssls',
     'emmet_ls',
     'dockerls',
+    'docker_compose_language_service',
     'html',
     'jsonls',
     'svlangserver',
+    'bashls',
+    'clangd',
+    'cmake',
+    'gopls',
+    'nil_ls',
+    'intelephense',
+    'jedi_language_server',
+    'svelte',
 });
 
 -- Auto Format on Save
