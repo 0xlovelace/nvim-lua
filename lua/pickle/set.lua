@@ -21,8 +21,9 @@ set.undofile = true
 set.hlsearch = false
 set.incsearch = true
 
-set.scrolloff = 20
+set.scrolloff = 12
 set.signcolumn = "yes"
 set.isfname:append("@-@")
 
 set.updatetime = 50
+set.clipboard = "unnamedplus"
