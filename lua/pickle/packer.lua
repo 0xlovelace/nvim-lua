@@ -14,6 +14,7 @@ return require('packer').startup(function(use)
         }
 
         -- Themes
+        use 'ellisonleao/gruvbox.nvim'
         use 'rose-pine/neovim'
         use 'folke/tokyonight.nvim'
 
