@@ -23,10 +23,10 @@ lsp.ensure_installed({
     'clangd',
     'cmake',
     'gopls',
-    'nil_ls',
     'intelephense',
     'jedi_language_server',
     'svelte',
+    'denols'
 });
 
 -- Auto Format on Save
