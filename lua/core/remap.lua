@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.keymap.set("n", "<C-t>", function() vim.cmd 'Neotree' end)
 
-
 -- Buffer Finder https://alpha2phi.medium.com/neovim-for-beginners-managing-buffers-91367668ce7
 vim.keymap.set('n', "<leader>bf", function()
     local results = {}
