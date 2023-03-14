@@ -29,7 +29,7 @@ lsp.ensure_installed({
 });
 
 -- Auto Format on Save
-vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.format()]]
+vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 
 -- Keybind to Format
 vim.keymap.set('n', '<C-f>', vim.lsp.buf.format)
