@@ -35,31 +35,19 @@ vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 -- Keybind to Format
 vim.keymap.set('n', '<C-f>', vim.lsp.buf.format)
 
-local on_attach = function(client)
+-- on every lsp attach it does a check for deno app
+lsp.on_attach(function(client)
     if nvim_lsp.util.root_pattern("deno.json", "import_map.json")(vim.fn.getcwd()) then
         if client.name == "tsserver" then
             client.stop()
             return
         end
     end
-
-    if nvim_lsp.util.root_pattern("package.json")(vim.fn.getcwd()) then
-        if client.name == "denols" then
-            client.stop()
-            return
-        end
-    end
-end
+end)
 
 -- Fix For Deno & TSserver Clash!
-lsp.configure('tsserver', {
-    on_attach = on_attach,
-    single_file_support = true,
-})
-
 lsp.configure('denols', {
-    on_attach = on_attach,
-    single_file_support = false,
+    root_dir = nvim_lsp.util.root_pattern("deno.json", "import_map.json"),
 })
 
 lsp.setup()
