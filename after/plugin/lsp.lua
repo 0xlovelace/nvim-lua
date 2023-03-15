@@ -25,7 +25,8 @@ lsp.ensure_installed({
     'gopls',
     'intelephense',
     'jedi_language_server',
-    'denols'
+    'denols',
+    'ltex'
 });
 
 -- Auto Format on Save
@@ -35,17 +36,20 @@ vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.format()]]
 vim.keymap.set('n', '<C-f>', vim.lsp.buf.format)
 
 local on_attach = function(client)
-    if nvim_lsp.util.root_pattern("deno.json")(vim.fn.getcwd()) then
+    if nvim_lsp.util.root_pattern("deno.json", "import_map.json")(vim.fn.getcwd()) then
         if client.name == "tsserver" then
             client.stop()
             return
         end
     end
-end
 
-vim.g.markdown_fenced_languages = {
-    "ts=typescript"
-}
+    if nvim_lsp.util.root_pattern("package.json")(vim.fn.getcwd()) then
+        if client.name == "denols" then
+            client.stop()
+            return
+        end
+    end
+end
 
 -- Fix For Deno & TSserver Clash!
 lsp.configure('tsserver', {

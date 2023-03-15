@@ -29,3 +29,7 @@ set.isfname:append("@-@")
 
 set.updatetime = 50
 set.clipboard = "unnamedplus"
+
+vim.g.markdown_fenced_languages = {
+    "ts=typescript"
+}
