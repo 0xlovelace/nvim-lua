@@ -30,12 +30,11 @@ return require('packer').startup(function(use)
     use('ThePrimeagen/harpoon')
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
-    use { "ellisonleao/glow.nvim", config = function() require("glow").setup() end }
 
-    use { 'nvim-orgmode/orgmode', config = function()
-        require('orgmode').setup {}
-    end
-    }
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
     -- Unless you are still migrating, remove the deprecated commands from v1.x
     vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
