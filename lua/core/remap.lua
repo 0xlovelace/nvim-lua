@@ -5,7 +5,8 @@ vim.keymap.set("n", "<C-t>", function() vim.cmd 'Neotree' end)
 -- Cycle Through Buffers
 vim.keymap.set("n", "<leader>bn", function() vim.cmd('bn') end)
 vim.keymap.set("n", "<leader>bp", function() vim.cmd('bp') end)
-vim.keymap.set("n", "<leader>bw", function() vim.cmd('bw') end)
+vim.keymap.set("n", "<leader>bw", function() vim.cmd('bw | bn') end)
+vim.keymap.set("n", "<leader>bl", function() vim.cmd('ls') end)
 
 -- Buffer Finder https://alpha2phi.medium.com/neovim-for-beginners-managing-buffers-91367668ce7
 vim.keymap.set('n', "<leader>bf", function()
