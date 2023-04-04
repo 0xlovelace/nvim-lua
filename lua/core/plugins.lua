@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     use 'rose-pine/neovim'
     use 'folke/tokyonight.nvim'
     use 'shaunsingh/nord.nvim'
+    use 'sainnhe/sonokai'
 
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/playground', { run = ':TSInstall query' })
