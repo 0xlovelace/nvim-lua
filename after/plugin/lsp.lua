@@ -9,6 +9,8 @@ lsp.nvim_workspace()
 
 lsp.ensure_installed({
     'tsserver',
+    'tailwindcss',
+    'prismals',
     'eslint',
     'lua_ls',
     'rust_analyzer',
