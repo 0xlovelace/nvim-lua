@@ -22,12 +22,7 @@ lsp.ensure_installed({
     'html',
     'jsonls',
     'bashls',
-    'clangd',
-    'cmake',
-    'gopls',
     'intelephense',
-    'jedi_language_server',
-    'denols',
     'ltex'
 });
 
