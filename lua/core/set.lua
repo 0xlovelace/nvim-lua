@@ -1,4 +1,8 @@
 local set = vim.opt
+local cmd = vim.cmd
+
+set.background = "light"
+cmd 'colorscheme rose-pine'
 
 set.nu = true
 set.relativenumber = true
@@ -12,7 +16,7 @@ set.smartindent = true
 
 set.wrap = false
 
-set.cursorline = true
+set.cursorline = false
 
 set.swapfile = false
 set.backup = false
