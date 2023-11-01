@@ -1,8 +1,6 @@
 local set = vim.opt
-local cmd = vim.cmd
 
 set.background = "light"
-cmd 'colorscheme rose-pine'
 
 set.nu = true
 set.relativenumber = true
