@@ -1,8 +1,10 @@
 -- Global Keys
 vim.g.mapleader = " "
-vim.keymap.set("n", "<C-t>", function() vim.cmd('Neotree') end)
+vim.keymap.set("n", "<C-f>", function() vim.cmd('Neotree') end)
+vim.keymap.set("n", "<C-t>", function() vim.cmd('term') end)
 
 -- Saving & Exiting Keybinds
+vim.keymap.set("n", "<C-q>", function() vim.cmd('qa!') end) -- exits editor
 vim.keymap.set("n", "<C-s>", function() vim.cmd('w') end)   -- save buffer
 vim.keymap.set("n", "<C-w>", function() vim.cmd('wq') end)  -- save buffer & exit
 vim.keymap.set("n", "<C-a>", function() vim.cmd('wqa') end) -- save all buffers & exit
@@ -14,6 +16,9 @@ vim.keymap.set("n", "<leader>bp", function() vim.cmd('bp') end)      -- Previous
 vim.keymap.set("n", "<leader>bw", function() vim.cmd('bw | bn') end) --closes current buffer & tabs to the next one
 vim.keymap.set("n", "<leader>bl", function() vim.cmd('ls') end)      -- list buffers
 vim.keymap.set("n", "<leader>ch", function() vim.cmd('changes') end) -- Shows Changes in current buffer
+
+-- Switch from Terminal to previous buffer
+vim.keymap.set("t", "<Escape>", '<C-\\><C-n>:lua vim.cmd(\'bp\')<CR>', { noremap = true, silent = true })
 
 -- Buffer Finder https://alpha2phi.medium.com/neovim-for-beginners-managing-buffers-91367668ce7
 vim.keymap.set('n', "<leader>bf", function()
