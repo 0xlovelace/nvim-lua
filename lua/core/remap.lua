@@ -17,6 +17,7 @@ vim.keymap.set("n", "<leader>bp", function() vim.cmd('bp') end)      -- Previous
 vim.keymap.set("n", "<leader>bd", function() vim.cmd('bd!') end)     --closes current buffer & tabs to the next one
 vim.keymap.set("n", "<leader>bl", function() vim.cmd('ls') end)      -- list buffers
 vim.keymap.set("n", "<leader>ch", function() vim.cmd('changes') end) -- Shows Changes in current buffer
+vim.keymap.set("n", "<C-B>", function() vim.cmd('enew') end)         -- Create Empty Buffer
 
 -- Switch from Terminal to previous buffer
 --vim.keymap.set("t", "<Escape>", '<C-\\><C-n>:lua vim.cmd(\'bp\')<CR>', { noremap = true, silent = true })
